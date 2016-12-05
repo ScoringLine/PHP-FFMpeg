@@ -1,5 +1,7 @@
 language: php
 
+dist: trusty
+
 branches:
   only:
     - master
@@ -23,12 +25,11 @@ matrix:
 before_install:
   - sudo add-apt-repository ppa:mc3man/trusty-media -y
   - sudo apt-get update -q
-  - sudo apt-get install ffmpeg -y
   - composer self-update
   - if [ "$COMPOSER_FLAGS" == "--prefer-lowest" ]; then composer require "roave/security-advisories" dev-master --no-update; fi;
 
 install:
-  - sudo apt-get install -y ffmpeg libavcodec-extra-53
+  - sudo apt-get install -y ffmpeg
   - composer update --prefer-source $COMPOSER_FLAGS
 
 script:
