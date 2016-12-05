@@ -9,6 +9,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 
+### Changed
+
+[1.0.0] - 2016-12-04
+--------------------
+
+### Added
+
 - Add pull request and issue templates.
 - Usage of new codec "aac" of ffmpeg 3
 
